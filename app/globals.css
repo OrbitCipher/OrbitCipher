@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 240 10% 3.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 240 10% 3.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 240 10% 3.9%;
+  --primary: 262 83.3% 57.8%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 240 4.8% 95.9%;
+  --secondary-foreground: 240 5.9% 10%;
+  --muted: 240 4.8% 95.9%;
+  --muted-foreground: 240 3.8% 46.1%;
+  --accent: 240 4.8% 95.9%;
+  --accent-foreground: 240 5.9% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 5.9% 90%;
+  --input: 240 5.9% 90%;
+  --ring: 262 83.3% 57.8%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 262 83.3% 57.8%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --ring: 262 83.3% 57.8%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Inspira UI inspired styles */
+.inspira-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.inspira-card {
+  @apply bg-black/40 backdrop-blur-md border border-white/10 rounded-xl overflow-hidden transition-all duration-300;
+}
+
+.inspira-card:hover {
+  @apply border-primary/30 shadow-[0_0_15px_rgba(124,58,237,0.2)];
+}
+
+.inspira-button-primary {
+  @apply bg-primary hover:bg-primary/90 text-white rounded-md px-4 py-2 transition-all duration-300 font-medium;
+}
+
+.inspira-button-secondary {
+  @apply bg-transparent border border-white/20 hover:border-white/40 text-white rounded-md px-4 py-2 transition-all duration-300 font-medium;
+}
+
+.inspira-gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-500;
+}
+
+.inspira-section {
+  @apply py-20;
+}
+
+.inspira-heading {
+  @apply text-3xl md:text-4xl font-bold mb-4;
+}
+
+.inspira-subheading {
+  @apply text-lg text-white/70 max-w-2xl mx-auto;
+}
+
+.inspira-nav-link {
+  @apply text-white/70 hover:text-white transition-colors relative;
+}
+
+.inspira-nav-link::after {
+  content: "";
+  @apply absolute left-0 bottom-0 w-0 h-0.5 bg-primary transition-all duration-300;
+}
+
+.inspira-nav-link:hover::after {
+  @apply w-full;
+}

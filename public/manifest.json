@@ -1,0 +1,21 @@
+{
+  "name": "Orbit Cipher",
+  "short_name": "OrbitCipher",
+  "description": "A decentralized science platform for space medical data, powered by blockchain technology",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#7c3aed",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/apple-icon",
+      "type": "image/png",
+      "sizes": "180x180"
+    }
+  ]
+}
